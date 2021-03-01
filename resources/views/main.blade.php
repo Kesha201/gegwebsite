@@ -21,7 +21,7 @@
   <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4">Welcome!</h1>
     <p class="lead">Welcome to my personal website! You can find out about me thanks to this site.</p>
-    <img src="https://psv4.userapi.com/c532036/u489010585/docs/d50/fde736811b39/gresf.jpg?extra=HrLSQ-THHUhEuGav0gFMVQfK7bW1DmyZp0XuQunCn8zEuPusao3rph1G7xqcvm2qG5oP2cjouGSNo2skRQ0GsRwa15AfXD2W-eaU2dY1Cwae1Q9v-Gc3etLCLyB95XTE0EHwpMuqeUj-rGWfrNo8Sqg" style="width: 180px" alt="" />
+    <img src="https://sun9-54.userapi.com/impf/ipndb_FsF4J4XGipbGKIj1dReOjvAj5f8aKNrA/MXDC_9_eNtA.jpg?size=607x1080&quality=96&sign=dc63e86b77b5cf04197868aeb6d9d749&type=album" style="width: 180px" alt="" />
   </div>
 
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
