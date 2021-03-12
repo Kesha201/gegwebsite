@@ -1,14 +1,4 @@
-<?php 
-session_start ();
-if(isset($_POST["send"])) {
-    $name = htmlspecialchars($_POST["name"]);
-    $email = htmlspecialchars($_POST["email"]);
-    $message = htmlspecialchars($_POST["message"]);
-    $_SESSION["name"] = $name;
-    $_SESSION["email"] = $email;
-    $_SESSION["message"] = $message;
-}
-?>
+<?php session_start (); if(isset($_POST["send"])) { $name = htmlspecialchars($_POST["name"]); $email = htmlspecialchars($_POST["email"]); $message = htmlspecialchars($_POST["message"]); $_SESSION["name"] = $name; $_SESSION["email"] = $email; $_SESSION["message"] = $message; } ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +25,7 @@ if(isset($_POST["send"])) {
   </div>
   <form>
       <p>
-          <input id="name" name="name" placeholder="Name" value="<?=$_SESSION["name"]?>" maxlength="40" type="text" autocomplete="off" spellcheck="false">
+          <input id="name" name="name" placeholder="Name" maxlength="40" type="text" autocomplete="off" spellcheck="false">
         </p>
         
         <p>
