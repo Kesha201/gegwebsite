@@ -32,15 +32,14 @@ return [
     |            "postmark", "log", "array"
     |
     */
-
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+            'host' => env('MAIL_HOST', 'smtp.gmail.com'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
+            'username' => env('MAIL_USERNAME', 'erkegalymbekova@gmail.com'),
+            'password' => env('MAIL_PASSWORD', 'erke2002'),
             'timeout' => null,
             'auth_mode' => null,
         ],
@@ -84,8 +83,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'erkegalymbekova@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'Yerkem'),
     ],
 
     /*
@@ -106,5 +105,11 @@ return [
             resource_path('views/vendor/mail'),
         ],
     ],
-
+    'stream' => [
+        'ssl' => [
+           'allow_self_signed' => true,
+           'verify_peer' => false,
+           'verify_peer_name' => false,
+        ],
+     ],
 ];
