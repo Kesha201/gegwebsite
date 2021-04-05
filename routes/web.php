@@ -45,5 +45,8 @@ Route::post('blog/create', [BlogController::class, 'store'])->name('add-post');
 
 Route::get('post/{id}', [BlogController::class, 'get_post']);
 
-Route::get('/uploadfile', 'UploadFileController@index');
-Route::post('/uploadfile', 'UploadFileController@showUploadFile');
+Route::get('/uploadfile', 'App\Http\Controllers\UploadFileController@index');
+Route::post('/uploadfile', 'App\Http\Controllers\UploadFileController@showUploadFile');
+
+Route::get('/multiuploads', 'App\Http\Controllers\UploadController@uploadForm');
+Route::post('/multiuploads', 'App\Http\Controllers\UploadController@uploadSubmit');
