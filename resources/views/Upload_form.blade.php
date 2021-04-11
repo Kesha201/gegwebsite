@@ -7,7 +7,8 @@
 <title>Laravel</title>
 <style>
 .container{
-    margin-top: 2%;
+    margin-top: 10%;
+    background-color: yellow;
 }
 </style>
 </head>
@@ -26,7 +27,7 @@
 <div class="container">
 <div class="row">
 <div class="col-md-2"></div>
-<div class="col-md-8"><h2>LA</h2></div>
+<div class="col-md-8"><h2>Upload File Form</h2></div>
 </div>
 <br>
 <div class="row">
@@ -36,11 +37,11 @@
 {{ csrf_field() }}
 <div class="form-group">
 <label for="Product Name">Name</label>
-<input type="text" name="name" class="form-control" placeholder="Name">
+<input type="text" name="name" class="form-control" placeholder="Name"><br><br>
 <label for="Product Name">Surame</label>
-<input type="text" name="surname" class="form-control" placeholder="Surname">
+<input type="text" name="surname" class="form-control" placeholder="Surname"><br><br>
 <label for="Product Name">Email</label>
-<input type="text" name="email" class="form-control" placeholder="Email">
+<input type="text" name="email" class="form-control" placeholder="Email"><br><br>
 </div>
 <label for="Product Name">Photo(can attach more than one):</label>
 <br />

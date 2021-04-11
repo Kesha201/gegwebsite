@@ -7,6 +7,10 @@ use App\Models\Post;
 
 use App\Http\Controllers\BlogController;
 
+use Resources\lang;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,8 +25,22 @@ use App\Http\Controllers\BlogController;
 Route::get('/', function () {
     return view('main');
 });
+Route::get('/{lang}', function ($lang) {
+    App::setlocale($lang);
+    return view('main');
+});
+
 Route::get('/about', function () {
     return view('about');
+});
+Route::get('/about/{lang}', function($lang) {
+    App::setlocale($lang);
+    return view('about');
+});
+
+Route::get('/contact/{lang}', function($lang) {
+    App::setlocale($lang);
+    return view('contact');
 });
 Route::get('/contact', function () {
     return view('contact');
@@ -51,4 +69,5 @@ Route::post('/uploadfile', 'App\Http\Controllers\UploadFileController@showUpload
 Route::get('/multiuploads', 'App\Http\Controllers\UploadController@uploadForm');
 Route::post('/multiuploads', 'App\Http\Controllers\UploadController@uploadSubmit');
 
-Route::get('mail/send', 'App\Http\Controllers\MailController@send');
+Route::get('mail/send', 'App\Http\Controllers\MailController@send');    
+

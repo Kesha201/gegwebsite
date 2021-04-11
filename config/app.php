@@ -93,8 +93,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
-
+    'fallback_locale' => 'kz',
     /*
     |--------------------------------------------------------------------------
     | Faker Locale
@@ -227,5 +226,11 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
     ],
+    'languages' => [
+        'en' => 'English',
+        'kz' => 'Kazakh',
+        'ru' => 'Russian',
+    ],
+
 
 ];
