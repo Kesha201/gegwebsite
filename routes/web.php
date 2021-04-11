@@ -9,6 +9,9 @@ use App\Http\Controllers\BlogController;
 
 use Resources\lang;
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LanguageController;
+
 
 
 /*
@@ -70,4 +73,8 @@ Route::get('/multiuploads', 'App\Http\Controllers\UploadController@uploadForm');
 Route::post('/multiuploads', 'App\Http\Controllers\UploadController@uploadSubmit');
 
 Route::get('mail/send', 'App\Http\Controllers\MailController@send');    
+
+Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
+
+Route::get('/languageDemo', 'App\Http\Controllers\HomeController@languageDemo');
 

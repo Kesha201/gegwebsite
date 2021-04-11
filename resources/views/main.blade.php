@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="/css/app.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+
 <body>
 <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-body border-bottom shadow-sm">
   <p class="h5 my-0 me-md-auto fw-normal">{{ __('message.geg')}}</p>
@@ -17,6 +18,19 @@
     <a class="p-2 text-dark" href="/contact">{{ __('message.contact')}}</a>
   </nav>
 </header>
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{ Config::get('languages')[App::getLocale()] }}
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    @foreach (Config::get('languages') as $lang => $language)
+        @if ($lang != App::getLocale())
+                <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"> {{$language}}</a>
+        @endif
+    @endforeach
+    </div>
+</li>
 <main class="container">
   <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4">{{ __('message.welcome')}}</h1>
